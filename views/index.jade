@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Blog Writer
+  p Welcome to #{title} Blog Writer
+
+  form(action="/submit", method="post")
+    label(for="title") Blog Title:
+    input(type="text", id="title", name="title")
+
+    button(type="submit") Submit
+
+  p Blog Content
+  p #{content}
